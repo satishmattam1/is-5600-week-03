@@ -1,18 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <title>Chat App</title>
-  <link rel="stylesheet" href="/tachyons.min.css">
-  <link rel="stylesheet" href="/chat.css">
-  <body>
-    <div id="messages">
-      <h4>Chat Messages</h4>
-    </div>
-    <form id="form">
-      <input
-      id="input"
-      type="text"
-      placeholder="Your message...">
-      </form>
-    <script src='/chat.js'></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Chat App</title>
+  <link rel="stylesheet" href="/chat.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f6fa;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+    }
+    h1 {
+      color: #333;
+    }
+    #messages {
+      width: 100%;
+      max-width: 600px;
+      border: 1px solid #ccc;
+      background: #fff;
+      padding: 1rem;
+      height: 250px;
+      overflow-y: auto;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+    }
+    form {
+      display: flex;
+      gap: 0.5rem;
+      width: 100%;
+      max-width: 600px;
+    }
+    input {
+      flex: 1;
+      padding: 0.5rem;
+      font-size: 1rem;
+    }
+    button {
+      padding: 0.5rem 1rem;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h1>💬 Simple Chat</h1>
+
+  <div id="messages"></div>
+
+  <form id="form">
+    <input id="input" placeholder="Type your message..." autocomplete="off" />
+    <button type="submit">Send</button>
+  </form>
+
+  <script src="/chat.js"></script>
+</body>
 </html>
